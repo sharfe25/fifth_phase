@@ -7,7 +7,6 @@ Phase Two is an e-commerce application built using Flutter. It provides a compre
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
 - [Providers](#providers)
 - [Contributing](#contributing)
 - [License](#license)
@@ -75,41 +74,6 @@ Please note:
 - If you refresh or restart the app, any registered user information will be lost unless you sign up again.
 - Mock user credentials (`test/test`) are provided solely for testing purposes and may not reflect actual user data.
 
-## Project Structure
-The project follows a structured approach for better maintainability:
-```sh
-  lib/
-  |-- components/
-  |   |-- pages/
-  |       |-- cart_page.dart
-  |       |-- category_page.dart
-  |       |-- contact_us_page.dart
-  |       |-- home_page.dart
-  |       |-- login_page.dart
-  |       |-- product_page.dart
-  |       |-- search_page.dart
-  |       |-- sign_up_page.dart
-  |-- models/
-  |   |-- cart_product_model.dart
-  |   |-- category_model.dart
-  |   |-- product_model.dart
-  |   |-- user_model.dart
-  |-- providers/
-  |   |-- auth_provider.dart
-  |   |-- cart_provider.dart
-  |   |-- category_provider.dart
-  |   |-- lateral_menu_provider.dart
-  |   |-- product_provider.dart
-  |-- tokens/
-  |   |-- app_colors.dart
-  |   |-- app_spacing.dart
-  |   |-- app_text_styles.dart
-  |-- utils/
-  |   |-- alerts_utils.dart
-  |   |-- string_utils.dart
-  |-- routes.dart
-  |-- main.dart
-```
 
 ## Providers
 
