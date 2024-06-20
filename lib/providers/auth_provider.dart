@@ -4,27 +4,28 @@ import '../models/user_model.dart';
 import '../utils/alerts_utils.dart';
 
 /// Enum that defines the types of authentication pages.
-enum TypePage { 
+enum TypePage {
   /// Login page.
-  login, 
+  login,
+
   /// Sign-up page.
-  signUp 
+  signUp
 }
 
 /// Class that manages authentication logic and controls user data.
 class AuthProvider with ChangeNotifier {
   /// Controller for the user's name.
   TextEditingController nameController = TextEditingController();
-  
+
   /// Controller for the user's last name.
   TextEditingController lastNameController = TextEditingController();
-  
+
   /// Controller for the user's email.
   TextEditingController emailController = TextEditingController();
-  
+
   /// Controller for the user's username.
   TextEditingController usernameController = TextEditingController();
-  
+
   /// Controller for the user's password.
   TextEditingController pswdController = TextEditingController();
 
@@ -81,6 +82,7 @@ class AuthProvider with ChangeNotifier {
   /// [context] is the application context where navigation occurs.
   void login({required BuildContext context}) async {
     if (usernameController.text == 'test' && pswdController.text == 'test') {
+      _user = const UserModel(username: 'Test', password: '');
       Navigator.pushNamed(
         context,
         '/home',
