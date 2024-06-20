@@ -80,7 +80,7 @@ class AuthProvider with ChangeNotifier {
   ///
   /// [context] is the application context where navigation occurs.
   void login({required BuildContext context}) async {
-    if (usernameController.text == '1' && pswdController.text == '1') {
+    if (usernameController.text == 'test' && pswdController.text == 'test') {
       Navigator.pushNamed(
         context,
         '/home',

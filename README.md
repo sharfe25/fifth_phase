@@ -44,32 +44,36 @@ flutter run
 
 ## Usage
 
-After installing the dependencies and running the application, you will be able to navigate through the various pages of the app:
+### Login
 
-- **Login Page**: Default landing page where users can log in.
-  - Path: `/`
-  - File: `lib/components/pages/login_page.dart`
-- **Sign Up Page**: Users can sign up for a new account.
-  - Path: `/sign_up`
-  - File: `lib/components/pages/sign_up_page.dart`
-- **Home Page**: Main page displaying product categories.
-  - Path: `/home`
-  - File: `lib/components/pages/home_page.dart`
-- **Category Page**: Displays products filtered by category.
-  - Path: `/products_by_category`
-  - File: `lib/components/pages/category_page.dart`
-- **Product Page**: Detailed view of a selected product.
-  - Path: `/product`
-  - File: `lib/components/pages/product_page.dart`
-- **Search Page**: Allows users to search for products.
-  - Path: `/search`
-  - File: `lib/components/pages/search_page.dart`
-- **Cart Page**: Displays products added to the cart.
-  - Path: `/cart`
-  - File: `lib/components/pages/cart_page.dart`
-- **Contact Us Page**: Page for users to contact support.
-  - Path: `/contact_us`
-  - File: `lib/components/pages/contact_us_page.dart`
+To log in, you have two options:
+1. **Mock User Credentials**: Use the following credentials for testing:
+   - Username: `test`
+   - Password: `test`
+   This allows you to log in with a pre-defined mock user account.
+
+2. **Sign Up First**: If you haven't signed up yet, you'll need to create a new account by navigating to the **Sign Up** page. After signing up, you can use the credentials you registered with to log in.
+
+### Example
+
+1. **Log In with Mock User Credentials**:
+   - Open the app and navigate to the **Login** page.
+   - Enter `test` as the username and `test` as the password.
+   - Tap on the **Login** button.
+   - You will be redirected to the **Home** page upon successful login.
+
+2. **Sign Up and Then Log In**:
+   - If you don't have an account yet, navigate to the **Sign Up** page.
+   - Fill in the required details (name, last name, email, username, and password).
+   - Tap on the **Register** button to create your account.
+   - After signing up, navigate back to the **Login** page.
+   - Enter your registered username and password.
+   - Tap on the **Login** button.
+   - You will be redirected to the **Home** page upon successful login.
+
+Please note:
+- If you refresh or restart the app, any registered user information will be lost unless you sign up again.
+- Mock user credentials (`test/test`) are provided solely for testing purposes and may not reflect actual user data.
 
 ## Project Structure
 The project follows a structured approach for better maintainability:
