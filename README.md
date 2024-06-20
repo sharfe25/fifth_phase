@@ -73,38 +73,39 @@ After installing the dependencies and running the application, you will be able 
 
 ## Project Structure
 The project follows a structured approach for better maintainability:
-
-lib/
-|-- components/
-|   |-- pages/
-|       |-- cart_page.dart
-|       |-- category_page.dart
-|       |-- contact_us_page.dart
-|       |-- home_page.dart
-|       |-- login_page.dart
-|       |-- product_page.dart
-|       |-- search_page.dart
-|       |-- sign_up_page.dart
-|-- models/
-|   |-- cart_product_model.dart
-|   |-- category_model.dart
-|   |-- product_model.dart
-|   |-- user_model.dart
-|-- providers/
-|   |-- auth_provider.dart
-|   |-- cart_provider.dart
-|   |-- category_provider.dart
-|   |-- lateral_menu_provider.dart
-|   |-- product_provider.dart
-|-- tokens/
-|   |-- app_colors.dart
-|   |-- app_spacing.dart
-|   |-- app_text_styles.dart
-|-- utils/
-|   |-- alerts_utils.dart
-|   |-- string_utils.dart
-|-- routes.dart
-|-- main.dart
+```sh
+  lib/
+  |-- components/
+  |   |-- pages/
+  |       |-- cart_page.dart
+  |       |-- category_page.dart
+  |       |-- contact_us_page.dart
+  |       |-- home_page.dart
+  |       |-- login_page.dart
+  |       |-- product_page.dart
+  |       |-- search_page.dart
+  |       |-- sign_up_page.dart
+  |-- models/
+  |   |-- cart_product_model.dart
+  |   |-- category_model.dart
+  |   |-- product_model.dart
+  |   |-- user_model.dart
+  |-- providers/
+  |   |-- auth_provider.dart
+  |   |-- cart_provider.dart
+  |   |-- category_provider.dart
+  |   |-- lateral_menu_provider.dart
+  |   |-- product_provider.dart
+  |-- tokens/
+  |   |-- app_colors.dart
+  |   |-- app_spacing.dart
+  |   |-- app_text_styles.dart
+  |-- utils/
+  |   |-- alerts_utils.dart
+  |   |-- string_utils.dart
+  |-- routes.dart
+  |-- main.dart
+```
 
 ## Providers
 
@@ -117,7 +118,7 @@ The app uses the Provider package for state management. Below are the providers 
 - ProductProvider: Manages product data, including search functionality and filtering by category.
 
 ## Screenshots
-![Preview](home.png)
+<img src="home.png" alt="drawing" width="200"/>
 ![Preview](sign_up.png)
 ![Preview](login.png)
 ![Preview](search.png)
