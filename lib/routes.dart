@@ -10,7 +10,7 @@ import 'components/pages/search_page.dart';
 import 'components/pages/sign_up_page.dart';
 
 final Map<String, WidgetBuilder> routes = {
-  '/': (context) => const LoginPage(),
+  '/login': (context) => const LoginPage(),
   '/sign_up': (context) => const SignUpPage(),
   '/home': (context) => const HomePage(),
   '/products_by_category': (context) => const CategoryPage(),

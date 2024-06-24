@@ -33,6 +33,7 @@ class SearchPage extends StatelessWidget {
         child: Column(
           children: [
             CustomSearchBar(
+              key: const Key('search_bar'),
               autofocus: true,
               productProvider: productProvider,
             ),

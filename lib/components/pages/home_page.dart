@@ -5,11 +5,9 @@ import 'package:provider/provider.dart';
 import '../../providers/cart_provider.dart';
 import '../../providers/lateral_menu_provider.dart';
 import '../../providers/product_provider.dart';
-import '../molecules/card_container.dart';
-import '../molecules/home/promotional_banners.dart';
+import '../organism/custom_lateral_menu.dart';
 import '../organism/custom_search_bar.dart';
-import '../organism/home/categories.dart';
-import '../organism/lateral_menu.dart';
+import '../organism/categories.dart';
 import '../tokens/app_spacing.dart';
 import '../tokens/app_text_styles.dart';
 
@@ -53,7 +51,11 @@ class _HomePageState extends State<HomePage> {
       onTapMenu: () {
         lateralMenuProvider.displayMenu(showMenuValue: true);
       },
-      lateralMenu: lateralMenuProvider.showMenu ? const LateralMenu() : null,
+      lateralMenu: lateralMenuProvider.showMenu
+          ? CustomLateralMenu(
+              lateralMenuProvider: lateralMenuProvider,
+            )
+          : null,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,7 +82,9 @@ class _HomePageState extends State<HomePage> {
               'Promotions',
               style: AppTextStyles.subtitle,
             ),
-            const PromotionalBanners(),
+            PromotionalBanners(
+              banners: productProvider.promotionalBanners,
+            ),
             CardsGrid(
               isLoading: productProvider.isLoading,
               title: 'New Arrival',

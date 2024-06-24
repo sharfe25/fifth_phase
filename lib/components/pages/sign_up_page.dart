@@ -59,6 +59,7 @@ class SignUpPage extends StatelessWidget {
                       child: Column(
                         children: [
                           CustomInput(
+                            key: const Key('name_field'),
                             onChanged: authProvider.isValidSignUp,
                             controller: authProvider.nameController,
                             label: 'Name',
@@ -67,6 +68,7 @@ class SignUpPage extends StatelessWidget {
                             height: AppSpacing.xLarge,
                           ),
                           CustomInput(
+                            key: const Key('last_name_field'),
                             onChanged: authProvider.isValidSignUp,
                             controller: authProvider.lastNameController,
                             label: 'Last name',
@@ -75,6 +77,7 @@ class SignUpPage extends StatelessWidget {
                             height: AppSpacing.xLarge,
                           ),
                           CustomInput(
+                            key: const Key('username_field'),
                             onChanged: authProvider.isValidSignUp,
                             controller: authProvider.usernameController,
                             label: 'Username',
@@ -83,6 +86,7 @@ class SignUpPage extends StatelessWidget {
                             height: AppSpacing.xLarge,
                           ),
                           CustomInput(
+                            key: const Key('email_field'),
                             onChanged: authProvider.isValidSignUp,
                             controller: authProvider.emailController,
                             label: 'Email',
@@ -91,6 +95,7 @@ class SignUpPage extends StatelessWidget {
                             height: AppSpacing.xLarge,
                           ),
                           CustomInput(
+                            key: const Key('password_field'),
                             onChanged: authProvider.isValidSignUp,
                             isObscure: true,
                             controller: authProvider.pswdController,
@@ -100,6 +105,7 @@ class SignUpPage extends StatelessWidget {
                             height: AppSpacing.xLarge,
                           ),
                           CustomButtonWidget(
+                            key: const Key('sign_up_btn'),
                             enabled: authProvider.isValidSignUpForm,
                             onPressed: () =>
                                 authProvider.signUp(context: context),
@@ -109,7 +115,7 @@ class SignUpPage extends StatelessWidget {
                             onPressed: () {
                               Navigator.pushNamed(
                                 context,
-                                '/',
+                                '/login',
                               );
                               authProvider.clearProvider();
                             },

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../providers/auth_provider.dart';
-import '../molecules/card_container.dart';
 import '../tokens/app_colors.dart';
 import '../tokens/app_spacing.dart';
 import '../tokens/app_text_styles.dart';
@@ -50,6 +49,7 @@ class LoginPage extends StatelessWidget {
                   child: Column(
                     children: [
                       CustomInput(
+                        key: const Key('username_field'),
                         onChanged: () => authProvider.isValidLogin(),
                         controller: authProvider.usernameController,
                         label: 'Username',
@@ -58,6 +58,7 @@ class LoginPage extends StatelessWidget {
                         height: AppSpacing.xLarge,
                       ),
                       CustomInput(
+                        key: const Key('password_field'),
                         onChanged: () => authProvider.isValidLogin(),
                         isObscure: true,
                         controller: authProvider.pswdController,

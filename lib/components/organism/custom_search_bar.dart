@@ -47,6 +47,7 @@ class CustomSearchBar extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(top: 3.0),
               child: CustomInput(
+                key: key,
                 enabled: enabled,
                 controller: productProvider.searchController,
                 hintText: 'Search a product',

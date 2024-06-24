@@ -1,7 +1,6 @@
 import 'package:ecommerce_design_system_package/ecommerce_design_system_package.dart';
 import 'package:flutter/material.dart';
 
-import '../molecules/card_container.dart';
 import '../tokens/app_colors.dart';
 import '../tokens/app_spacing.dart';
 import '../tokens/app_text_styles.dart';
@@ -22,7 +21,6 @@ class ContactUsPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Display card container with title and subtitle
             const CardContainer(
               title: 'Contact Us',
               subtitle: 'Fast and real time responses',

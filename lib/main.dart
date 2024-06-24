@@ -26,7 +26,7 @@ class MainApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => CartProvider()),
       ],
       child: MaterialApp(
-        initialRoute: '/',
+        initialRoute: '/login',
         routes: routes,
         debugShowCheckedModeBanner: false,
         title: 'Fifth Phase',

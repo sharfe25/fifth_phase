@@ -53,7 +53,6 @@ class CartPage extends StatelessWidget {
                 ),
               )
             else
-              // Display list of cart products
               ListView.separated(
                 itemCount: cartProvider.productsInCart.length,
                 shrinkWrap: true,

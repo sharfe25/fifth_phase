@@ -19,10 +19,10 @@ class ProductPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final ProductProvider productProvider =
         Provider.of<ProductProvider>(context, listen: false);
-    
+
     ProductModel product =
         productProvider.productSelected ?? ProductModel.empty();
-    
+
     return DashboardTemplate(
       onTapBack: () => Navigator.pop(context),
       body: SingleChildScrollView(
@@ -39,10 +39,12 @@ class ProductPage extends StatelessWidget {
                   color: AppColors.whiteColor,
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: Image.network(
-                  product.image,
-                  fit: BoxFit.contain,
-                ),
+                child: product.image.isNotEmpty
+                    ? Image.network(
+                        product.image,
+                        fit: BoxFit.contain,
+                      )
+                    : const SizedBox.shrink(),
               ),
             ),
             Text(
@@ -85,7 +87,9 @@ class ProductPage extends StatelessWidget {
             SizedBox(
               width: 150,
               child: ChipWidget(
-                chipData: ChipModel(title: product.category,),
+                chipData: ChipModel(
+                  title: product.category,
+                ),
               ),
             )
           ],

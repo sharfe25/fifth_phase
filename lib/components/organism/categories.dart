@@ -2,11 +2,11 @@ import 'package:ecommerce_design_system_package/components/molecules/chips_carou
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../providers/category_provider.dart';
-import '../../../providers/product_provider.dart';
-import '../../molecules/skeletons/categories_skeleton.dart';
-import '../../tokens/app_spacing.dart';
-import '../../tokens/app_text_styles.dart';
+import '../../providers/category_provider.dart';
+import '../../providers/product_provider.dart';
+import '../molecules/skeletons/categories_skeleton.dart';
+import '../tokens/app_spacing.dart';
+import '../tokens/app_text_styles.dart';
 
 /// A widget that displays a list of categories using a carousel.
 ///
