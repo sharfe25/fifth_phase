@@ -43,7 +43,6 @@ class _CategoriesState extends State<Categories> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          /// Display the title text for categories
           const Padding(
             padding: EdgeInsets.only(top: AppSpacing.small),
             child: Text(
@@ -52,10 +51,8 @@ class _CategoriesState extends State<Categories> {
             ),
           ),
 
-          /// Display the skeleton while loading
           if (categoryProvider.isLoading) const CategoriesSkeleton(),
 
-          /// Display the category carousel when data is loaded
           if (!categoryProvider.isLoading)
             ChipsCarousel(
               chips: categoryProvider.createCarouselChips(
